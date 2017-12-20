@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:Nupsa2.xcodeproj">
+      location = "self:/Users/vladimirpertsov/Documents/GitHub/Nupsa2/Nupsa2/Nupsa.xcodeproj">
    </FileRef>
 </Workspace>

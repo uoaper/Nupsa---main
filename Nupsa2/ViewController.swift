@@ -8,14 +8,15 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
     
     //URL to our web service
-    let URL_SAVE_TEAM = "http://192.168.1.39/api/createteam.php"
+    let URL_SAVE_TEAM = "http://47.91.91.22/api/createteam.php"
     
     
     //TextFields declarations
     
+    @IBOutlet weak var Scrollview: UIScrollView!
     @IBOutlet weak var textFieldName: UITextField!
     @IBOutlet weak var textFieldMember: UITextField!
     
@@ -27,12 +28,16 @@ class ViewController: UIViewController {
     @IBOutlet weak var Before: UITextField!
     @IBOutlet weak var After: UITextField!
     
+   
+    
+    
+    
+    
     //Button action method
     @IBAction func ButtonSave(_ sender: UIButton) {
     
     
-    
-    
+  
         
         
         
@@ -46,8 +51,9 @@ class ViewController: UIViewController {
         request.httpMethod = "POST"
         
         //getting values from text fields
-        let adversityText=textFieldName.text
+        let adversityText = textFieldName.text
         let beliefText = textFieldMember.text
+       
         let conseqText = Consequen.text
         let disputText = Disput.text
         let energyText = Energy.text
@@ -64,7 +70,7 @@ class ViewController: UIViewController {
         //creating a task to send the post request
         let task = URLSession.shared.dataTask(with: request as URLRequest){
             data, response, error in
-            
+             print(NSString(data: request.httpBody!, encoding:String.Encoding.utf8.rawValue)!)
             if error != nil{
                 print("error is \(String(describing: error))")
                 return;
@@ -91,12 +97,17 @@ class ViewController: UIViewController {
             } catch {
                 print(error)
             }
-            
+           
         }
         //executing the task
         task.resume()
-        
-        
+        self.Energy.text = nil
+       self.Disput.text = nil
+        self.textFieldName.text = nil
+        self.textFieldMember.text = nil
+        self.Consequen.text = nil
+        self.After.text = nil
+        self.Before.text = nil
     }
     
     
@@ -110,5 +121,27 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        
+        return true
+    }
+    func textFieldDidBeginEditing(_ textField: UITextField)
     
+    {
+        
+        if (textField == Disput || textField == Energy || textField == Before || textField == After)
+    {
+        Scrollview.setContentOffset(CGPoint(x: 0, y: 250), animated: true)
+        
+    }
+    }
+    
+   
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        Scrollview.setContentOffset(CGPoint(x: 0, y: 0), animated: true)
+    }
 }
+
+

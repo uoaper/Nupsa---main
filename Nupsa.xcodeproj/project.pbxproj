@@ -13,6 +13,10 @@
 		DD012F671FA91646008C68C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD012F661FA91646008C68C0 /* Assets.xcassets */; };
 		DD012F751FA91646008C68C0 /* Nupsa2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD012F741FA91646008C68C0 /* Nupsa2Tests.swift */; };
 		DD012F801FA91646008C68C0 /* Nupsa2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD012F7F1FA91646008C68C0 /* Nupsa2UITests.swift */; };
+		DD31D1F41FB4C2A900D8A5A2 /* SecondVIewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD31D1F31FB4C2A900D8A5A2 /* SecondVIewController.swift */; };
+		DD31D1F61FB4CB7700D8A5A2 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD31D1F51FB4CB7700D8A5A2 /* HomeModel.swift */; };
+		DD31D1F81FB4CB9600D8A5A2 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD31D1F71FB4CB9600D8A5A2 /* Log.swift */; };
+		DD4634B01FC5E67D00CF366C /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = DD4634AF1FC5E67D00CF366C /* Podfile */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,18 +37,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		DD012F5C1FA91646008C68C0 /* Nupsa2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nupsa2.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD012F5C1FA91646008C68C0 /* Nupsa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nupsa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD012F5F1FA91646008C68C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DD012F611FA91646008C68C0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DD012F641FA91646008C68C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DD012F661FA91646008C68C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DD012F6B1FA91646008C68C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DD012F701FA91646008C68C0 /* Nupsa2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Nupsa2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD012F701FA91646008C68C0 /* NupsaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NupsaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD012F741FA91646008C68C0 /* Nupsa2Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nupsa2Tests.swift; sourceTree = "<group>"; };
 		DD012F761FA91646008C68C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DD012F7B1FA91646008C68C0 /* Nupsa2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Nupsa2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD012F7B1FA91646008C68C0 /* NupsaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NupsaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD012F7F1FA91646008C68C0 /* Nupsa2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nupsa2UITests.swift; sourceTree = "<group>"; };
 		DD012F811FA91646008C68C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DD31D1F31FB4C2A900D8A5A2 /* SecondVIewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondVIewController.swift; sourceTree = "<group>"; };
+		DD31D1F51FB4CB7700D8A5A2 /* HomeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
+		DD31D1F71FB4CB9600D8A5A2 /* Log.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
+		DD4634AF1FC5E67D00CF366C /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Podfile; path = Nupsa2/Podfile; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +83,7 @@
 		DD012F531FA91646008C68C0 = {
 			isa = PBXGroup;
 			children = (
+				DD4634AF1FC5E67D00CF366C /* Podfile */,
 				DD012F5E1FA91646008C68C0 /* Nupsa2 */,
 				DD012F731FA91646008C68C0 /* Nupsa2Tests */,
 				DD012F7E1FA91646008C68C0 /* Nupsa2UITests */,
@@ -85,9 +94,9 @@
 		DD012F5D1FA91646008C68C0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DD012F5C1FA91646008C68C0 /* Nupsa2.app */,
-				DD012F701FA91646008C68C0 /* Nupsa2Tests.xctest */,
-				DD012F7B1FA91646008C68C0 /* Nupsa2UITests.xctest */,
+				DD012F5C1FA91646008C68C0 /* Nupsa.app */,
+				DD012F701FA91646008C68C0 /* NupsaTests.xctest */,
+				DD012F7B1FA91646008C68C0 /* NupsaUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -97,9 +106,12 @@
 			children = (
 				DD012F5F1FA91646008C68C0 /* AppDelegate.swift */,
 				DD012F611FA91646008C68C0 /* ViewController.swift */,
+				DD31D1F31FB4C2A900D8A5A2 /* SecondVIewController.swift */,
 				DD012F631FA91646008C68C0 /* Main.storyboard */,
 				DD012F661FA91646008C68C0 /* Assets.xcassets */,
 				DD012F6B1FA91646008C68C0 /* Info.plist */,
+				DD31D1F51FB4CB7700D8A5A2 /* HomeModel.swift */,
+				DD31D1F71FB4CB9600D8A5A2 /* Log.swift */,
 			);
 			path = Nupsa2;
 			sourceTree = "<group>";
@@ -125,9 +137,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		DD012F5B1FA91646008C68C0 /* Nupsa2 */ = {
+		DD012F5B1FA91646008C68C0 /* Nupsa */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DD012F841FA91646008C68C0 /* Build configuration list for PBXNativeTarget "Nupsa2" */;
+			buildConfigurationList = DD012F841FA91646008C68C0 /* Build configuration list for PBXNativeTarget "Nupsa" */;
 			buildPhases = (
 				DD012F581FA91646008C68C0 /* Sources */,
 				DD012F591FA91646008C68C0 /* Frameworks */,
@@ -137,14 +149,14 @@
 			);
 			dependencies = (
 			);
-			name = Nupsa2;
+			name = Nupsa;
 			productName = Nupsa2;
-			productReference = DD012F5C1FA91646008C68C0 /* Nupsa2.app */;
+			productReference = DD012F5C1FA91646008C68C0 /* Nupsa.app */;
 			productType = "com.apple.product-type.application";
 		};
-		DD012F6F1FA91646008C68C0 /* Nupsa2Tests */ = {
+		DD012F6F1FA91646008C68C0 /* NupsaTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DD012F871FA91646008C68C0 /* Build configuration list for PBXNativeTarget "Nupsa2Tests" */;
+			buildConfigurationList = DD012F871FA91646008C68C0 /* Build configuration list for PBXNativeTarget "NupsaTests" */;
 			buildPhases = (
 				DD012F6C1FA91646008C68C0 /* Sources */,
 				DD012F6D1FA91646008C68C0 /* Frameworks */,
@@ -155,14 +167,14 @@
 			dependencies = (
 				DD012F721FA91646008C68C0 /* PBXTargetDependency */,
 			);
-			name = Nupsa2Tests;
+			name = NupsaTests;
 			productName = Nupsa2Tests;
-			productReference = DD012F701FA91646008C68C0 /* Nupsa2Tests.xctest */;
+			productReference = DD012F701FA91646008C68C0 /* NupsaTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		DD012F7A1FA91646008C68C0 /* Nupsa2UITests */ = {
+		DD012F7A1FA91646008C68C0 /* NupsaUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DD012F8A1FA91646008C68C0 /* Build configuration list for PBXNativeTarget "Nupsa2UITests" */;
+			buildConfigurationList = DD012F8A1FA91646008C68C0 /* Build configuration list for PBXNativeTarget "NupsaUITests" */;
 			buildPhases = (
 				DD012F771FA91646008C68C0 /* Sources */,
 				DD012F781FA91646008C68C0 /* Frameworks */,
@@ -173,9 +185,9 @@
 			dependencies = (
 				DD012F7D1FA91646008C68C0 /* PBXTargetDependency */,
 			);
-			name = Nupsa2UITests;
+			name = NupsaUITests;
 			productName = Nupsa2UITests;
-			productReference = DD012F7B1FA91646008C68C0 /* Nupsa2UITests.xctest */;
+			productReference = DD012F7B1FA91646008C68C0 /* NupsaUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -185,26 +197,30 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = "Vladimir Pertsov";
 				TargetAttributes = {
 					DD012F5B1FA91646008C68C0 = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = K5KBDDK66W;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 					DD012F6F1FA91646008C68C0 = {
 						CreatedOnToolsVersion = 8.3.3;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 						TestTargetID = DD012F5B1FA91646008C68C0;
 					};
 					DD012F7A1FA91646008C68C0 = {
 						CreatedOnToolsVersion = 8.3.3;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 						TestTargetID = DD012F5B1FA91646008C68C0;
 					};
 				};
 			};
-			buildConfigurationList = DD012F571FA91646008C68C0 /* Build configuration list for PBXProject "Nupsa2" */;
+			buildConfigurationList = DD012F571FA91646008C68C0 /* Build configuration list for PBXProject "Nupsa" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -217,9 +233,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				DD012F5B1FA91646008C68C0 /* Nupsa2 */,
-				DD012F6F1FA91646008C68C0 /* Nupsa2Tests */,
-				DD012F7A1FA91646008C68C0 /* Nupsa2UITests */,
+				DD012F5B1FA91646008C68C0 /* Nupsa */,
+				DD012F6F1FA91646008C68C0 /* NupsaTests */,
+				DD012F7A1FA91646008C68C0 /* NupsaUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -229,6 +245,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD4634B01FC5E67D00CF366C /* Podfile in Resources */,
 				DD012F671FA91646008C68C0 /* Assets.xcassets in Resources */,
 				DD012F651FA91646008C68C0 /* Main.storyboard in Resources */,
 			);
@@ -255,8 +272,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD31D1F61FB4CB7700D8A5A2 /* HomeModel.swift in Sources */,
 				DD012F621FA91646008C68C0 /* ViewController.swift in Sources */,
+				DD31D1F81FB4CB9600D8A5A2 /* Log.swift in Sources */,
 				DD012F601FA91646008C68C0 /* AppDelegate.swift in Sources */,
+				DD31D1F41FB4C2A900D8A5A2 /* SecondVIewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,12 +301,12 @@
 /* Begin PBXTargetDependency section */
 		DD012F721FA91646008C68C0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = DD012F5B1FA91646008C68C0 /* Nupsa2 */;
+			target = DD012F5B1FA91646008C68C0 /* Nupsa */;
 			targetProxy = DD012F711FA91646008C68C0 /* PBXContainerItemProxy */;
 		};
 		DD012F7D1FA91646008C68C0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = DD012F5B1FA91646008C68C0 /* Nupsa2 */;
+			target = DD012F5B1FA91646008C68C0 /* Nupsa */;
 			targetProxy = DD012F7C1FA91646008C68C0 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -313,7 +333,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -321,7 +343,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -364,7 +390,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -372,7 +400,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -402,11 +434,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = Nupsa2/Info.plist;
+				DEVELOPMENT_TEAM = K5KBDDK66W;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = Nupsa/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = vgtt.Nupsa2;
+				PRODUCT_BUNDLE_IDENTIFIER = vgtt.Nupsa;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -414,11 +452,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = Nupsa2/Info.plist;
+				DEVELOPMENT_TEAM = K5KBDDK66W;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = Nupsa/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = vgtt.Nupsa2;
+				PRODUCT_BUNDLE_IDENTIFIER = vgtt.Nupsa;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
@@ -431,8 +475,9 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = vgtt.Nupsa2Tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Nupsa2.app/Nupsa2";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Nupsa.app/Nupsa";
 			};
 			name = Debug;
 		};
@@ -445,8 +490,9 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = vgtt.Nupsa2Tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Nupsa2.app/Nupsa2";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Nupsa.app/Nupsa";
 			};
 			name = Release;
 		};
@@ -458,7 +504,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = vgtt.Nupsa2UITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 				TEST_TARGET_NAME = Nupsa2;
 			};
 			name = Debug;
@@ -471,7 +518,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = vgtt.Nupsa2UITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 				TEST_TARGET_NAME = Nupsa2;
 			};
 			name = Release;
@@ -479,7 +527,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		DD012F571FA91646008C68C0 /* Build configuration list for PBXProject "Nupsa2" */ = {
+		DD012F571FA91646008C68C0 /* Build configuration list for PBXProject "Nupsa" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DD012F821FA91646008C68C0 /* Debug */,
@@ -488,29 +536,32 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DD012F841FA91646008C68C0 /* Build configuration list for PBXNativeTarget "Nupsa2" */ = {
+		DD012F841FA91646008C68C0 /* Build configuration list for PBXNativeTarget "Nupsa" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DD012F851FA91646008C68C0 /* Debug */,
 				DD012F861FA91646008C68C0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
-		DD012F871FA91646008C68C0 /* Build configuration list for PBXNativeTarget "Nupsa2Tests" */ = {
+		DD012F871FA91646008C68C0 /* Build configuration list for PBXNativeTarget "NupsaTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DD012F881FA91646008C68C0 /* Debug */,
 				DD012F891FA91646008C68C0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
-		DD012F8A1FA91646008C68C0 /* Build configuration list for PBXNativeTarget "Nupsa2UITests" */ = {
+		DD012F8A1FA91646008C68C0 /* Build configuration list for PBXNativeTarget "NupsaUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DD012F8B1FA91646008C68C0 /* Debug */,
 				DD012F8C1FA91646008C68C0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
