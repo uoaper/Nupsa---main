@@ -1,0 +1,6 @@
+framework module Pods_Nupsa {
+  umbrella header "Pods-Nupsa-umbrella.h"
+
+  export *
+  module * { export * }
+}

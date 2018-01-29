@@ -1,1 +1,5 @@
-47.91.91.22
+target 'Nupsa' do
+use_frameworks!
+pod 'IQKeyboardManagerSwift'
+pod 'GoogleSignIn'
+end
