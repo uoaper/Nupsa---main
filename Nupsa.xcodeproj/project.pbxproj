@@ -13,12 +13,13 @@
 		DD012F671FA91646008C68C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD012F661FA91646008C68C0 /* Assets.xcassets */; };
 		DD012F751FA91646008C68C0 /* Nupsa2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD012F741FA91646008C68C0 /* Nupsa2Tests.swift */; };
 		DD012F801FA91646008C68C0 /* Nupsa2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD012F7F1FA91646008C68C0 /* Nupsa2UITests.swift */; };
-		DD2D47C02008E0E80080568C /* SortingVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2D47BF2008E0E80080568C /* SortingVIew.swift */; };
+		DD2D47C02008E0E80080568C /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2D47BF2008E0E80080568C /* CoreDataStack.swift */; };
 		DD2D47C2200D0E370080568C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DD2D47C1200D0E370080568C /* GoogleService-Info.plist */; };
 		DD2D47C4200DFFE60080568C /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2D47C3200DFFE60080568C /* Menu.swift */; };
 		DD31D1F41FB4C2A900D8A5A2 /* SecondVIewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD31D1F31FB4C2A900D8A5A2 /* SecondVIewController.swift */; };
 		DD31D1F61FB4CB7700D8A5A2 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD31D1F51FB4CB7700D8A5A2 /* HomeModel.swift */; };
 		DD31D1F81FB4CB9600D8A5A2 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD31D1F71FB4CB9600D8A5A2 /* Log.swift */; };
+		DDAC9862201F7A7900369578 /* Nupsa.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DDAC9860201F7A7900369578 /* Nupsa.xcdatamodeld */; };
 		EE7C6503604B8D798985266B /* Pods_Nupsa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5817F2BD7EF906B958D39B6 /* Pods_Nupsa.framework */; };
 /* End PBXBuildFile section */
 
@@ -54,13 +55,14 @@
 		DD012F7B1FA91646008C68C0 /* NupsaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NupsaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD012F7F1FA91646008C68C0 /* Nupsa2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nupsa2UITests.swift; sourceTree = "<group>"; };
 		DD012F811FA91646008C68C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DD2D47BF2008E0E80080568C /* SortingVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortingVIew.swift; sourceTree = "<group>"; };
+		DD2D47BF2008E0E80080568C /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		DD2D47C1200D0E370080568C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DD2D47C3200DFFE60080568C /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
 		DD2D47C5200E0A890080568C /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		DD31D1F31FB4C2A900D8A5A2 /* SecondVIewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondVIewController.swift; sourceTree = "<group>"; };
 		DD31D1F51FB4CB7700D8A5A2 /* HomeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
 		DD31D1F71FB4CB9600D8A5A2 /* Log.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
+		DDAC9861201F7A7900369578 /* Nupsa.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Nupsa.xcdatamodel; sourceTree = "<group>"; };
 		F5817F2BD7EF906B958D39B6 /* Pods_Nupsa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Nupsa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -139,11 +141,12 @@
 				DD31D1F31FB4C2A900D8A5A2 /* SecondVIewController.swift */,
 				DD31D1F51FB4CB7700D8A5A2 /* HomeModel.swift */,
 				DD31D1F71FB4CB9600D8A5A2 /* Log.swift */,
-				DD2D47BF2008E0E80080568C /* SortingVIew.swift */,
 				DD012F631FA91646008C68C0 /* Main.storyboard */,
 				DD012F661FA91646008C68C0 /* Assets.xcassets */,
 				DD012F6B1FA91646008C68C0 /* Info.plist */,
 				DD2D47C1200D0E370080568C /* GoogleService-Info.plist */,
+				DDAC9860201F7A7900369578 /* Nupsa.xcdatamodeld */,
+				DD2D47BF2008E0E80080568C /* CoreDataStack.swift */,
 			);
 			path = Nupsa;
 			sourceTree = "<group>";
@@ -358,10 +361,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				DD31D1F61FB4CB7700D8A5A2 /* HomeModel.swift in Sources */,
+				DDAC9862201F7A7900369578 /* Nupsa.xcdatamodeld in Sources */,
 				DD012F621FA91646008C68C0 /* ViewController.swift in Sources */,
 				DD31D1F81FB4CB9600D8A5A2 /* Log.swift in Sources */,
 				DD2D47C4200DFFE60080568C /* Menu.swift in Sources */,
-				DD2D47C02008E0E80080568C /* SortingVIew.swift in Sources */,
+				DD2D47C02008E0E80080568C /* CoreDataStack.swift in Sources */,
 				DD012F601FA91646008C68C0 /* AppDelegate.swift in Sources */,
 				DD31D1F41FB4C2A900D8A5A2 /* SecondVIewController.swift in Sources */,
 			);
@@ -669,6 +673,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		DDAC9860201F7A7900369578 /* Nupsa.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				DDAC9861201F7A7900369578 /* Nupsa.xcdatamodel */,
+			);
+			currentVersion = DDAC9861201F7A7900369578 /* Nupsa.xcdatamodel */;
+			path = Nupsa.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = DD012F541FA91646008C68C0 /* Project object */;
 }
