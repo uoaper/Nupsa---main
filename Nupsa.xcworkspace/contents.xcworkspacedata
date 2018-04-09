@@ -2,6 +2,18 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:Nupsa/Tests+CoreDataClass.swift">
+   </FileRef>
+   <FileRef
+      location = "group:Nupsa/Tests+CoreDataProperties.swift">
+   </FileRef>
+   <FileRef
+      location = "group:/Users/vladimirpertsov/Documents/GitHub/Nupsa/Nupsa/Nupsa/Main+CoreDataClass.swift">
+   </FileRef>
+   <FileRef
+      location = "group:/Users/vladimirpertsov/Documents/GitHub/Nupsa/Nupsa/Nupsa/Main+CoreDataProperties.swift">
+   </FileRef>
+   <FileRef
       location = "group:Nupsa.xcodeproj">
    </FileRef>
    <FileRef

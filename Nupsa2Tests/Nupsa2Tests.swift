@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import Nupsa2
+@testable import Nupsa
 
 class Nupsa2Tests: XCTestCase {
     

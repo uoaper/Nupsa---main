@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>937147178730-17cto6r7c6qdeo78jfc2i7d97rsvusvl.apps.googleusercontent.com</string>
+	<string>843617829690-qjdf827tkpcgfti3737i9une6gbgf0p8.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.937147178730-17cto6r7c6qdeo78jfc2i7d97rsvusvl</string>
+	<string>com.googleusercontent.apps.843617829690-qjdf827tkpcgfti3737i9une6gbgf0p8</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
@@ -13,18 +13,18 @@
 	<key>PROJECT_ID</key>
 	<string>firebase-nupsa</string>
 	<key>IS_ADS_ENABLED</key>
-	<false></false>
+	<false/>
 	<key>IS_ANALYTICS_ENABLED</key>
-	<false></false>
+	<false/>
 	<key>IS_APPINVITE_ENABLED</key>
-	<false></false>
+	<false/>
 	<key>IS_GCM_ENABLED</key>
-	<false></false>
+	<false/>
 	<key>IS_SIGNIN_ENABLED</key>
-	<true></true>
+	<true/>
 	<key>GOOGLE_APP_ID</key>
 	<string>1:937147178730:ios:866a70ab2a5753c1</string>
-    <key>TRACKING_ID</key>
-    <string>UA-XXXXXX-X</string>
+	<key>TRACKING_ID</key>
+	<string>UA-XXXXXX-X</string>
 </dict>
 </plist>

@@ -12,6 +12,8 @@ import CoreData
 class CoreDataStack {
     
     
+
+    
     lazy var managedObjectContext: NSManagedObjectContext = {
         let container = self.persistentContainer
         
@@ -19,7 +21,7 @@ class CoreDataStack {
     } ()
     
     private lazy var persistentContainer: NSPersistentContainer = {
-        let container = NSPersistentContainer(name: "TodoList")
+        let container = NSPersistentContainer(name: "Nupsa")
         container.loadPersistentStores() { storeDescription, error in
             if let error = error as NSError? {
                 fatalError("Unresolved error: \(error), \(error.userInfo)")
@@ -27,6 +29,11 @@ class CoreDataStack {
         }
         return container
     }()
+
+    
+  
+    
+    
 }
 
 

@@ -1,4 +1,16 @@
 PODS:
+  - Alamofire (4.6.0)
+  - Bolts (1.9.0):
+    - Bolts/AppLinks (= 1.9.0)
+    - Bolts/Tasks (= 1.9.0)
+  - Bolts/AppLinks (1.9.0):
+    - Bolts/Tasks
+  - Bolts/Tasks (1.9.0)
+  - FBSDKCoreKit (4.30.0):
+    - Bolts (~> 1.7)
+  - FBSDKLoginKit (4.30.0):
+    - FBSDKCoreKit
+  - Gloss (2.0.0)
   - GoogleSignIn (4.1.1):
     - GoogleToolboxForMac/NSDictionary+URLArguments (~> 2.1)
     - GoogleToolboxForMac/NSString+URLArguments (~> 2.1)
@@ -20,18 +32,29 @@ PODS:
   - GTMSessionFetcher/Full (1.1.12):
     - GTMSessionFetcher/Core (= 1.1.12)
   - IQKeyboardManagerSwift (5.0.4)
+  - Sync (4.1.1)
 
 DEPENDENCIES:
+  - Alamofire (~> 4.5)
+  - FBSDKLoginKit
+  - Gloss (~> 2.0)
   - GoogleSignIn
   - IQKeyboardManagerSwift
+  - Sync (~> 4)
 
 SPEC CHECKSUMS:
+  Alamofire: f41a599bd63041760b26d393ec1069d9d7b917f4
+  Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
+  FBSDKCoreKit: 7c4bba2877781a131ab5d54c0a78c405d4307b62
+  FBSDKLoginKit: fe7a7e82373dc5daad92e1623219e86224ab1fb1
+  Gloss: b67617f327406adfd47adf20172d00680a3a31bd
   GoogleSignIn: 3fdaa34a2ba04dbd7a25d7db39aecb0da98d5bdc
   GoogleToolboxForMac: 2501e2ad72a52eb3dfe7bd9aee7dad11b858bd20
   GTMOAuth2: be83fd28d63ae3087e7d351b1f39c1a7e24ab6e7
   GTMSessionFetcher: ebaa1f79a5366922c1735f1566901f50beba23b7
   IQKeyboardManagerSwift: a0592bb636b10a9a1cf75d2b2c61144226226c84
+  Sync: e0f652f552935c63cbc911f588b3eebe70490402
 
-PODFILE CHECKSUM: 7acd1f6fb5a5757ad1f10d3159b396e8da3f60ad
+PODFILE CHECKSUM: a947c6cf5948aa805946c7ce291e1469b73ef743
 
 COCOAPODS: 1.2.0
