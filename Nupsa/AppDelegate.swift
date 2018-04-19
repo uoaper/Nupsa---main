@@ -129,7 +129,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
             
             // [END_EXCLUDE]
             UserDefaults.standard.set(idToken, forKey: "idTokenGoogle")
-            UserDefaults.standard.set(userId, forKey: "UserIdByGoogle")
+            UserDefaults.standard.set(userId, forKey: "userIdByGoogle")
+            UserDefaults.standard.set(idToken, forKey: "google_token")
+            UserDefaults.standard.set(userId, forKey: "google_id")
+            
             
         }
     }

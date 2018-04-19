@@ -43,7 +43,8 @@ class MenuViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDelega
         
         //Facebook login
         view.addSubview(loginButton)
-        loginButton.center = view.center
+        loginButton.center.y = view.center.y - 50
+        loginButton.center.x = view.center.x
         loginButton.delegate = self
         if let token = FBSDKAccessToken.current() {
             fetchProfile()
@@ -74,6 +75,8 @@ class MenuViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDelega
         // [START_EXCLUDE silent]
         statusText.text = "Signed out."
         toggleAuthUI()
+        UserDefaults.standard.set(nil, forKey: "userIdByGoogle")
+        UserDefaults.standard.set(nil, forKey: "idTokenGoogle")
         // [END_EXCLUDE]
     }
     // [END signout_tapped]
@@ -93,7 +96,7 @@ class MenuViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDelega
     func toggleAuthUI() {
         if GIDSignIn.sharedInstance().hasAuthInKeychain() {
             // Signed in
-            signInButton.isHidden = true
+            signInButton.isHidden = false
             signOutButton.isHidden = false
             disconnectButton.isHidden = false
             
@@ -101,7 +104,7 @@ class MenuViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDelega
             signInButton.isHidden = false
             signOutButton.isHidden = true
             disconnectButton.isHidden = true
-            statusText.text = "Google Sign in gopa"
+            if UserDefaults.standard.string(forKey: "userIdByFacebook") == nil { statusText.text = "You are not signed in. Please do it :)" }
         }
     }
     // [END toggle_auth]
@@ -159,6 +162,12 @@ class MenuViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDelega
                 let email = item!["email"] as? String
                 let id = item!["id"] as? String
                 let thirdPartyId = item!["third_party_id"] as? String
+                
+                
+                let first_name: String = (item!["first_name"] as? String)!
+                let last_name: String = (item!["last_name"] as? String)!
+                let fullname = first_name + " " + last_name
+                
                 let tokenFromFacebook = FBSDKAccessToken.current().tokenString
             print(FBSDKAccessToken.current().tokenString)
                 
@@ -168,6 +177,9 @@ class MenuViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDelega
          //       UserDefaults.standard.set(email, forKey: "emailByFacebook")
                 UserDefaults.standard.set(id, forKey: "userIdByFacebook")
            UserDefaults.standard.set(tokenFromFacebook, forKey: "idTokenFacebook")
+             UserDefaults.standard.set(id, forKey: "facebook_id")
+              UserDefaults.standard.set(tokenFromFacebook, forKey: "facebook_token")
+                self.statusText.text = "Facebook auth status ok"
                 
             }
         }
@@ -178,7 +190,9 @@ class MenuViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDelega
             self.toggleAuthUI()
             if notification.userInfo != nil {
                 guard let userInfo = notification.userInfo as? [String:String] else { return }
-                self.statusText.text = userInfo["statusText"]!
+                self.statusText.text = "Google auth status ok"
+                    
+                    //userInfo["statusText"]!
             }
         }
     }

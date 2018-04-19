@@ -39,6 +39,10 @@ enum UserDefaultsKeys : String {
     case userIdByGoogle
     case idTokenFacebook
     case userIdByFacebook
+    case google_id
+    case facebook_id
+    case google_token
+    case facebook_token
     
     
 }

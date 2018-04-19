@@ -37,6 +37,7 @@ class PHQController: UIViewController {
     
     @IBOutlet weak var TotalScore: UILabel!
     
+    @IBOutlet weak var ButtonSaveOutlet: UIButton!
     var totalScore: Int = 0
     
     override func viewDidLoad() {
@@ -51,6 +52,26 @@ class PHQController: UIViewController {
          SliderSevenOut.addTarget(self, action: #selector(sliderSevenValueChanged(_:)), for: UIControlEvents.allEvents)
          SliderEightOut.addTarget(self, action: #selector(sliderEightValueChanged(_:)), for: UIControlEvents.allEvents)
          SliderNineOut.addTarget(self, action: #selector(sliderNineValueChanged(_:)), for: UIControlEvents.allEvents)
+       
+        let button = ButtonSaveOutlet
+        if UserDefaults.standard.string(forKey: "idTokenGoogle") == nil && UserDefaults.standard.string(forKey: "idTokenFacebook") == nil  {
+            button?.setTitle("You're not logged in", for: .normal)
+            button?.backgroundColor = UIColor.red
+        } else {
+            button?.setTitle("Finish test", for: .normal)
+        }
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        let button = ButtonSaveOutlet
+        if UserDefaults.standard.string(forKey: "idTokenGoogle") != nil || UserDefaults.standard.string(forKey: "idTokenFacebook") != nil  {
+            button?.setTitle("Finish test", for: .normal)
+            button?.backgroundColor = UIColor(red: 231/255, green: 255/255, blue: 214/255, alpha: 1.0)
+        } else {
+            button?.setTitle("You're not logged in", for: .normal)
+            button?.backgroundColor = UIColor.red
+        }
         
     }
 
@@ -310,7 +331,7 @@ class PHQController: UIViewController {
         else if totalScore <= 27 { resultText = "Severe level of depression. That's not good. We suggest you to go the therapist and we will be glad to help you fill better" }
         
         
-          self.TotalScore.text = "Total score: \(String(scoreOne + scoreTwo)) \n\(resultText) "
+          self.TotalScore.text = "Result: \(String(scoreOne + scoreTwo)) \n\(resultText) "
             
         
         
@@ -356,7 +377,17 @@ class PHQController: UIViewController {
             item.userIdByTokenHolder = UserDefaults.standard.string(forKey: "userIdByFacebook")
         }
         
+        if UserDefaults.standard.string(forKey: "userIdByGoogle") != nil {
+            item.google_id = UserDefaults.standard.string(forKey: "userIdByGoogle")
+            item.google_token = UserDefaults.standard.string(forKey: "idTokenGoogle")
+        } else { item.google_id = ""
+            item.google_token = ""
+            print("we still dont have UserIdByGoogle fucking shit")}
         
+        if UserDefaults.standard.string(forKey: "userIdByFacebook") != nil {
+            item.facebook_id = UserDefaults.standard.string(forKey: "userIdByFacebook")
+            item.facebook_token = UserDefaults.standard.string(forKey: "idTokenFacebook")
+        } else { item.facebook_id = "" }
         
         
         // self.Responce.text = "Nupsa saved succesefull"

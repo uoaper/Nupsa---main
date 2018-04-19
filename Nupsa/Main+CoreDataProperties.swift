@@ -32,5 +32,9 @@ extension Main {
     @NSManaged public var userIdByTokenHolder: String?
     @NSManaged public var synched: NSNumber?
     @NSManaged public var tokenHolder: String?
+    @NSManaged public var google_id: String?
+    @NSManaged public var facebook_id: String?
+    @NSManaged public var google_token: String?
+    @NSManaged public var facebook_token: String?
 
 }

@@ -13,6 +13,7 @@
 		DD012F671FA91646008C68C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD012F661FA91646008C68C0 /* Assets.xcassets */; };
 		DD012F751FA91646008C68C0 /* Nupsa2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD012F741FA91646008C68C0 /* Nupsa2Tests.swift */; };
 		DD012F801FA91646008C68C0 /* Nupsa2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD012F7F1FA91646008C68C0 /* Nupsa2UITests.swift */; };
+		DD0E83D3207D043400DC8443 /* MethodController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0E83D2207D043400DC8443 /* MethodController.swift */; };
 		DD1FFA71202362FB002E012D /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1FFA70202362FA002E012D /* UserDefaults.swift */; };
 		DD2D47C02008E0E80080568C /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2D47BF2008E0E80080568C /* CoreDataStack.swift */; };
 		DD2D47C2200D0E370080568C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DD2D47C1200D0E370080568C /* GoogleService-Info.plist */; };
@@ -34,6 +35,7 @@
 		DDAC9869201F915C00369578 /* AddNupsaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDAC9868201F915C00369578 /* AddNupsaController.swift */; };
 		DDAC986F201F937D00369578 /* NupsaFetchResultsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDAC986E201F937D00369578 /* NupsaFetchResultsController.swift */; };
 		DDAC9871201F940600369578 /* Datasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDAC9870201F940600369578 /* Datasource.swift */; };
+		DDC7CCF9207F4A670035E084 /* MethodPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC7CCF8207F4A670035E084 /* MethodPageController.swift */; };
 		DDCF7829201FB7BD0019573D /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDCF7828201FB7BD0019573D /* DetailViewController.swift */; };
 		DDCF782C2021BF190019573D /* Main+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDCF782A2021BF0F0019573D /* Main+CoreDataClass.swift */; };
 		DDCF782D2021BF190019573D /* Main+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDCF782B2021BF180019573D /* Main+CoreDataProperties.swift */; };
@@ -88,6 +90,7 @@
 		DD012F7B1FA91646008C68C0 /* NupsaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NupsaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD012F7F1FA91646008C68C0 /* Nupsa2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nupsa2UITests.swift; sourceTree = "<group>"; };
 		DD012F811FA91646008C68C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DD0E83D2207D043400DC8443 /* MethodController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MethodController.swift; sourceTree = "<group>"; };
 		DD1FFA70202362FA002E012D /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 		DD2D47BF2008E0E80080568C /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		DD2D47C1200D0E370080568C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -106,11 +109,13 @@
 		DD5772022073869300876733 /* Nupsa-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Nupsa-Bridging-Header.h"; sourceTree = "<group>"; };
 		DD577203207388D700876733 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = Nupsa/FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		DD577204207388D900876733 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = Nupsa/FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		DD96B2C52085379200EDD0FA /* Nupsa.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Nupsa.entitlements; sourceTree = "<group>"; };
 		DDAC9861201F7A7900369578 /* Nupsa.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Nupsa.xcdatamodel; sourceTree = "<group>"; };
 		DDAC9865201F903900369578 /* LogController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogController.swift; sourceTree = "<group>"; };
 		DDAC9868201F915C00369578 /* AddNupsaController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNupsaController.swift; sourceTree = "<group>"; };
 		DDAC986E201F937D00369578 /* NupsaFetchResultsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NupsaFetchResultsController.swift; sourceTree = "<group>"; };
 		DDAC9870201F940600369578 /* Datasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Datasource.swift; sourceTree = "<group>"; };
+		DDC7CCF8207F4A670035E084 /* MethodPageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MethodPageController.swift; sourceTree = "<group>"; };
 		DDCF7828201FB7BD0019573D /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		DDCF782A2021BF0F0019573D /* Main+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Main+CoreDataClass.swift"; path = "/Users/vladimirpertsov/Documents/GitHub/Nupsa/Nupsa/Nupsa/Main+CoreDataClass.swift"; sourceTree = "<absolute>"; };
 		DDCF782B2021BF180019573D /* Main+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Main+CoreDataProperties.swift"; path = "/Users/vladimirpertsov/Documents/GitHub/Nupsa/Nupsa/Nupsa/Main+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
@@ -192,6 +197,7 @@
 		DD012F5E1FA91646008C68C0 /* Nupsa */ = {
 			isa = PBXGroup;
 			children = (
+				DD96B2C52085379200EDD0FA /* Nupsa.entitlements */,
 				DD497E13202446C3002896C9 /* Models */,
 				DD1FFA6F2022FA17002E012D /* Old */,
 				DDAC9867201F911C00369578 /* APIClient */,
@@ -214,6 +220,7 @@
 				DDCF782B2021BF180019573D /* Main+CoreDataProperties.swift */,
 				DDAC9860201F7A7900369578 /* Nupsa.xcdatamodeld */,
 				DD5772022073869300876733 /* Nupsa-Bridging-Header.h */,
+				DDC7CCF8207F4A670035E084 /* MethodPageController.swift */,
 			);
 			path = Nupsa;
 			sourceTree = "<group>";
@@ -243,6 +250,7 @@
 				DD2D47C5200E0A890080568C /* Bridging-Header.h */,
 				DD012F611FA91646008C68C0 /* ViewController.swift */,
 				DD31D1F31FB4C2A900D8A5A2 /* SecondVIewController.swift */,
+				DD0E83D2207D043400DC8443 /* MethodController.swift */,
 				DD31D1F51FB4CB7700D8A5A2 /* HomeModel.swift */,
 				DD31D1F71FB4CB9600D8A5A2 /* Log.swift */,
 			);
@@ -337,14 +345,19 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Vladimir Pertsov";
 				TargetAttributes = {
 					DD012F5B1FA91646008C68C0 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = K5KBDDK66W;
+						DevelopmentTeam = YMFX5JV285;
 						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 0;
+							};
+						};
 					};
 					DD012F6F1FA91646008C68C0 = {
 						CreatedOnToolsVersion = 8.3.3;
@@ -473,6 +486,7 @@
 				DDAC986F201F937D00369578 /* NupsaFetchResultsController.swift in Sources */,
 				DD3DA844202DEC15006AEADD /* SendingApiPart.swift in Sources */,
 				DD3DA83E202B3C6A006AEADD /* CoreDataStackJSON.swift in Sources */,
+				DDC7CCF9207F4A670035E084 /* MethodPageController.swift in Sources */,
 				DD3DA840202B7D57006AEADD /* RefreshController.swift in Sources */,
 				DDE3BE1D2035671700001C2F /* CheckInternetConnection.swift in Sources */,
 				DD505F12205AD05D00627E59 /* SendTokenToServer.swift in Sources */,
@@ -487,6 +501,7 @@
 				DDCF782D2021BF190019573D /* Main+CoreDataProperties.swift in Sources */,
 				DDCF7829201FB7BD0019573D /* DetailViewController.swift in Sources */,
 				DD31D1F41FB4C2A900D8A5A2 /* SecondVIewController.swift in Sources */,
+				DD0E83D3207D043400DC8443 /* MethodController.swift in Sources */,
 				DD497E15202446DF002896C9 /* JSONNupsa.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -548,6 +563,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -555,6 +571,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -609,6 +626,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -616,6 +634,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -658,14 +677,14 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = YMFX5JV285;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/Nupsa",
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = Nupsa/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = vgtt.Nupsa;
+				PRODUCT_BUNDLE_IDENTIFIER = me.nupsa;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Nupsa/Nupsa-Bridging-Header.h";
@@ -684,14 +703,14 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = YMFX5JV285;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/Nupsa",
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = Nupsa/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = vgtt.Nupsa;
+				PRODUCT_BUNDLE_IDENTIFIER = me.nupsa;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Nupsa/Nupsa-Bridging-Header.h";

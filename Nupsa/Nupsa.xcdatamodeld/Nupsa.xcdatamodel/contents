@@ -9,6 +9,10 @@
         <attribute name="datestamp" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="disput" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="energy" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="facebook_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="facebook_token" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="google_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="google_token" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES">
             <userInfo>
                 <entry key="sync.isPrimaryKey" value="true"/>
@@ -22,9 +26,13 @@
     <entity name="Tests" representedClassName="Tests" syncable="YES" codeGenerationType="class">
         <attribute name="datestamp" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="eigthQuestion" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="facebook_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="facebook_token" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="fifthQuestion" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="firstQuestion" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="fourthQuestion" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="google_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="google_token" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="nineQuestion" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="secondQuestion" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="seventhQuestion" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
@@ -37,7 +45,7 @@
         <attribute name="userIdByTokenHolder" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Main" positionX="-63" positionY="-18" width="128" height="240"/>
-        <element name="Tests" positionX="-63" positionY="63" width="128" height="270"/>
+        <element name="Main" positionX="-63" positionY="-18" width="128" height="300"/>
+        <element name="Tests" positionX="-63" positionY="63" width="128" height="330"/>
     </elements>
 </model>

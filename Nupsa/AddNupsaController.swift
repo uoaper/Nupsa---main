@@ -43,8 +43,23 @@ var managedObjectContext = CoreDataStack().managedObjectContext
     @IBOutlet weak var AfterTextLabel: UILabel!
     
     
+    @IBOutlet weak var AfterLabel: UILabel!
+    @IBOutlet weak var AfterSlider: UISlider!
+    
+    let step: Float = 1
+    @IBAction func AfterSliderChange(_ sender: UISlider)  {
+        let roundedValue = round(sender.value / step) * step
+        sender.value = roundedValue
+        // Do something else with the value
+        
+        AfterLabel.text = "\(Int(roundedValue))"
+        
+        
+    }
     
     
+    
+    @IBOutlet weak var ButtonSaveOutlet: UIButton!
     
     
     
@@ -63,9 +78,30 @@ var managedObjectContext = CoreDataStack().managedObjectContext
         
         // Uncomment to automatically sign in the user.
         GIDSignIn.sharedInstance().signInSilently()
+        
+       
+        let button = ButtonSaveOutlet
+        if UserDefaults.standard.string(forKey: "idTokenGoogle") == nil && UserDefaults.standard.string(forKey: "idTokenFacebook") == nil  {
+            button?.setTitle("You're not logged in", for: .normal)
+            button?.backgroundColor = UIColor.red
+        } else {
+            button?.setTitle("Add", for: .normal)
+        }
     }
     
   
+    override func viewDidAppear(_ animated: Bool) {
+     let button = ButtonSaveOutlet
+        if UserDefaults.standard.string(forKey: "idTokenGoogle") != nil || UserDefaults.standard.string(forKey: "idTokenFacebook") != nil  {
+            button?.setTitle("Add", for: .normal)
+            button?.backgroundColor = UIColor(red: 231/255, green: 255/255, blue: 214/255, alpha: 1.0)
+        } else {
+            button?.setTitle("You're not logged in", for: .normal)
+            button?.backgroundColor = UIColor.red
+        }
+        
+    }
+    
    @IBAction func ButtonSave(_ sender: Any)
     
     
@@ -93,13 +129,16 @@ var managedObjectContext = CoreDataStack().managedObjectContext
     }
 
     
+  /*
     guard let scoreBefore = Int16(Before.text!) else {
       return   Responce.text = "Input values are not numeric"
     }
-  
-    guard let scoreAfter = Int16(After.text!) else {
+ 
+
+    guard let scoreAfter = AfterSlider.value else {
        return  Responce.text = "Input values are not numeric"
     }
+     */
     
         let item = NSEntityDescription.insertNewObject(forEntityName: "Main", into: managedObjectContext) as! Main
        //let appDelegate = AppDelegate()
@@ -109,8 +148,8 @@ var managedObjectContext = CoreDataStack().managedObjectContext
         item.conseq = textConseq
         item.disput = textDisput
         item.energy = textEnergy
-        item.beforeScore = scoreBefore
-        item.afterScore = scoreAfter
+   //     item.beforeScore = scoreBefore
+    item.afterScore = Int16(AfterSlider.value)
         item.datestamp = Date()
     //    item.token =  UserDefaults.standard.string(forKey: "idTokenGoogle")
    //     item.userIdByTokenHolder =  UserDefaults.standard.string(forKey: "UserIdByGoogle")
@@ -141,6 +180,22 @@ var managedObjectContext = CoreDataStack().managedObjectContext
         item.userIdByTokenHolder = UserDefaults.standard.string(forKey: "userIdByFacebook")
     }
     
+    // For API writing all id and tokens if they exist
+   
+   
+    
+    if UserDefaults.standard.string(forKey: "userIdByGoogle") != nil {
+          item.google_id = UserDefaults.standard.string(forKey: "userIdByGoogle")
+        item.google_token = UserDefaults.standard.string(forKey: "idTokenGoogle")
+    } else { item.google_id = ""
+        print("we still dont have UserIdByGoogle fucking shit")}
+    
+    if UserDefaults.standard.string(forKey: "userIdByFacebook") != nil {
+        item.facebook_id = UserDefaults.standard.string(forKey: "userIdByFacebook")
+        item.facebook_token = UserDefaults.standard.string(forKey: "idTokenFacebook")
+    } else { item.facebook_id = "" }
+
+
         self.Responce.text = "Nupsa saved succesefull"
         managedObjectContext.saveChanges()
         
@@ -152,8 +207,8 @@ var managedObjectContext = CoreDataStack().managedObjectContext
     self.Adversity.text = nil
     self.Belief.text = nil
     self.Consequen.text = nil
-    self.After.text = nil
-    self.Before.text = nil
+   // self.After.text = nil
+//    self.Before.text = nil
     
    NotificationCenter.default.post(name: .reload, object: nil)
    
