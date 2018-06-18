@@ -66,11 +66,12 @@ var managedObjectContext = CoreDataStack().managedObjectContext
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        
+
+            print("but we are in else somehow")
       
         NotificationCenter.default.addObserver(self, selector: #selector(ButtonSave), name: NSNotification.Name(rawValue: "load"), object: nil)
  
-        
-        print ("AddListControlles Context: \(managedObjectContext.description)")
      
         
         GIDSignIn.sharedInstance().uiDelegate = self
@@ -87,9 +88,13 @@ var managedObjectContext = CoreDataStack().managedObjectContext
         } else {
             button?.setTitle("Add", for: .normal)
         }
+            
+        
     }
     
-  
+    @IBOutlet weak var ScrollView: UIScrollView!
+    
+    
     override func viewDidAppear(_ animated: Bool) {
      let button = ButtonSaveOutlet
         if UserDefaults.standard.string(forKey: "idTokenGoogle") != nil || UserDefaults.standard.string(forKey: "idTokenFacebook") != nil  {
@@ -99,8 +104,14 @@ var managedObjectContext = CoreDataStack().managedObjectContext
             button?.setTitle("You're not logged in", for: .normal)
             button?.backgroundColor = UIColor.red
         }
+      /*
+     self.ScrollView.frame = self.view.frame
         
+        self.ScrollView.contentSize = self.view.frame.size
+        
+         */
     }
+
     
    @IBAction func ButtonSave(_ sender: Any)
     
@@ -195,8 +206,13 @@ var managedObjectContext = CoreDataStack().managedObjectContext
         item.facebook_token = UserDefaults.standard.string(forKey: "idTokenFacebook")
     } else { item.facebook_id = "" }
 
-
-        self.Responce.text = "Nupsa saved succesefull"
+ButtonSaveOutlet.setTitle("Nupsa saved successfull", for: .normal)
+    
+    DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 10) {
+        self.ButtonSaveOutlet.setTitle("Add", for: .normal)
+    }
+    
+    
         managedObjectContext.saveChanges()
         
         dismiss(animated: true, completion: nil)

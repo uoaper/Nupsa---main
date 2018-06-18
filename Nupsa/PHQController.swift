@@ -324,11 +324,15 @@ class PHQController: UIViewController {
     
         let totalScore = scoreOne + scoreTwo + scoreThree
        
-        if totalScore <= 4 { resultText = "None-minimal level of depression. You're perfectly health" }
-        else if totalScore <= 9 { resultText = "Mild level of depression. Consider making nupsa 3 days a week for a month" }
-        else if totalScore <= 14 { resultText = "Moderate level of depression. You shoud defenetly make nupsa for a couple of months" }
-        else if totalScore <= 19 { resultText = "Moderately Severe level of depression. Oh - Oh you should go to the therapisy and make Nupsa for a 3 -4 motnh." }
-        else if totalScore <= 27 { resultText = "Severe level of depression. That's not good. We suggest you to go the therapist and we will be glad to help you fill better" }
+        if totalScore <= 4 { resultText = "None-minimal level of depression. You're perfectly health. Write us and we will send your money back of give it for some charity :)" }
+            
+        else if totalScore <= 9 { resultText = "Mild level of depression. Consider making nupsa 3 times a day for a month. Repeat test after that." }
+            
+        else if totalScore <= 14 { resultText = "Moderate level of depression. We suggest definitely try to make nupsa for a couple of months (3 - 5 times a day). Repeat test after that. Also consider counseling, follow-up, and/or prescription drugs." }
+            
+        else if totalScore <= 19 { resultText = "Moderately Severe level of depression. Oh - oh we really suggest you to visit  counseling and we hope our service will good support for you on the way to recovery." }
+            
+        else if totalScore <= 27 { resultText = "Severe level of depression. That's not good. We suggest you to go the therapist and we will be really proud if our service will help you to feel better." }
         
         
           self.TotalScore.text = "Result: \(String(scoreOne + scoreTwo)) \n\(resultText) "

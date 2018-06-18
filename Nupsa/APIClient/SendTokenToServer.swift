@@ -29,7 +29,7 @@ class SendTokenToServer: NSObject {
             {
                 
                 
-                let URL_SAVE_DATA = URL(string: "http://www.nupsa.me/api/TokensInsert.php")
+                let URL_SAVE_DATA = URL(string: "http://api.nupsa.me/TokensInsert.php")
                 let request = NSMutableURLRequest(url: URL_SAVE_DATA!)
                 
                 print("after serialization = \(jsonData)")

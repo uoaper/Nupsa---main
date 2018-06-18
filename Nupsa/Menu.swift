@@ -43,11 +43,16 @@ class MenuViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDelega
         
         //Facebook login
         view.addSubview(loginButton)
-        loginButton.center.y = view.center.y - 50
-        loginButton.center.x = view.center.x
+    //    loginButton.center.y = view.center.y - 50
+    //    loginButton.center.x = signInButton.center.x
+       loginButton.centerXAnchor.constraint(equalTo: signInButton.centerXAnchor).isActive = true
+        loginButton.centerYAnchor.constraint(equalTo: signInButton.centerYAnchor, constant: 150).isActive = true
+      loginButton.autoresizesSubviews = true
+        loginButton.translatesAutoresizingMaskIntoConstraints = false
         loginButton.delegate = self
-        if let token = FBSDKAccessToken.current() {
+        if (FBSDKAccessToken.current()) != nil {
             fetchProfile()
+   
         }
         
         
@@ -67,6 +72,8 @@ class MenuViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDelega
  
     }
     
+    
+    
     // [END viewdidload]
     // [START signout_tapped]
     
@@ -85,6 +92,8 @@ class MenuViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDelega
     
     @IBAction func didTapDisconnect(_ sender: AnyObject) {
         GIDSignIn.sharedInstance().disconnect()
+        UserDefaults.standard.set(nil, forKey: "userIdByGoogle")
+        UserDefaults.standard.set(nil, forKey: "idTokenGoogle")
         // [START_EXCLUDE silent]
         statusText.text = "Disconnecting."
         // [END_EXCLUDE]
@@ -141,39 +150,43 @@ class MenuViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDelega
     }
     
     func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!) {
-      //  return true
+        UserDefaults.standard.set(nil, forKey: "userIdByFacebook")
+        UserDefaults.standard.set(nil, forKey: "idTokenFacebook")
+        UserDefaults.standard.set(nil, forKey: "facebook_id")
+        UserDefaults.standard.set(nil, forKey: "facebook_token")
+        
+       // return true
     }
     
     func fetchProfile() {
         print("fetch profile")
         
         let parameters = ["fields": "email, first_name, last_name, picture.type(large), id, third_party_id"]
+       
+        
         FBSDKGraphRequest(graphPath: "me", parameters: parameters).start {
             (connection, result, error) in
             
             if error != nil {
-                print(error)
+                print(error ?? "no error")
                 return
             } else {
             
           
            let item = result as? [String:Any]
             
-                let email = item!["email"] as? String
-                let id = item!["id"] as? String
-                let thirdPartyId = item!["third_party_id"] as? String
+              //  let email = item!["email"] as? String
+               let id = item!["id"] as? String
+               // let thirdPartyId = item!["third_party_id"] as? String
                 
                 
-                let first_name: String = (item!["first_name"] as? String)!
-                let last_name: String = (item!["last_name"] as? String)!
-                let fullname = first_name + " " + last_name
+            //    let first_name: String = (item!["first_name"] as? String)!
+             //   let last_name: String = (item!["last_name"] as? String)!
+               // var fullname = first_name + " " + last_name
                 
                 let tokenFromFacebook = FBSDKAccessToken.current().tokenString
             print(FBSDKAccessToken.current().tokenString)
-                
-                print(email)
-                print(id)
-                print(thirdPartyId)
+             
          //       UserDefaults.standard.set(email, forKey: "emailByFacebook")
                 UserDefaults.standard.set(id, forKey: "userIdByFacebook")
            UserDefaults.standard.set(tokenFromFacebook, forKey: "idTokenFacebook")
@@ -189,7 +202,7 @@ class MenuViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDelega
         if notification.name.rawValue == "ToggleAuthUINotification" {
             self.toggleAuthUI()
             if notification.userInfo != nil {
-                guard let userInfo = notification.userInfo as? [String:String] else { return }
+                guard (notification.userInfo as? [String:String]) != nil else { return }
                 self.statusText.text = "Google auth status ok"
                     
                     //userInfo["statusText"]!

@@ -30,6 +30,9 @@
 		DD505F12205AD05D00627E59 /* SendTokenToServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD505F11205AD05D00627E59 /* SendTokenToServer.swift */; };
 		DD577205207388DB00876733 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD577203207388D700876733 /* FBSDKLoginKit.framework */; };
 		DD577206207388DB00876733 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD577204207388D900876733 /* FBSDKCoreKit.framework */; };
+		DD6065C8209DFCB000F7188D /* SwipingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6065C7209DFCB000F7188D /* SwipingController.swift */; };
+		DD6065CA209E034A00F7188D /* PageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6065C9209E034A00F7188D /* PageCell.swift */; };
+		DD6065CE209EF5BF00F7188D /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6065CD209EF5BF00F7188D /* Page.swift */; };
 		DDAC9862201F7A7900369578 /* Nupsa.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DDAC9860201F7A7900369578 /* Nupsa.xcdatamodeld */; };
 		DDAC9866201F903900369578 /* LogController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDAC9865201F903900369578 /* LogController.swift */; };
 		DDAC9869201F915C00369578 /* AddNupsaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDAC9868201F915C00369578 /* AddNupsaController.swift */; };
@@ -109,6 +112,9 @@
 		DD5772022073869300876733 /* Nupsa-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Nupsa-Bridging-Header.h"; sourceTree = "<group>"; };
 		DD577203207388D700876733 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = Nupsa/FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		DD577204207388D900876733 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = Nupsa/FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		DD6065C7209DFCB000F7188D /* SwipingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipingController.swift; sourceTree = "<group>"; };
+		DD6065C9209E034A00F7188D /* PageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageCell.swift; sourceTree = "<group>"; };
+		DD6065CD209EF5BF00F7188D /* Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page.swift; sourceTree = "<group>"; };
 		DD96B2C52085379200EDD0FA /* Nupsa.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Nupsa.entitlements; sourceTree = "<group>"; };
 		DDAC9861201F7A7900369578 /* Nupsa.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Nupsa.xcdatamodel; sourceTree = "<group>"; };
 		DDAC9865201F903900369578 /* LogController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogController.swift; sourceTree = "<group>"; };
@@ -221,6 +227,9 @@
 				DDAC9860201F7A7900369578 /* Nupsa.xcdatamodeld */,
 				DD5772022073869300876733 /* Nupsa-Bridging-Header.h */,
 				DDC7CCF8207F4A670035E084 /* MethodPageController.swift */,
+				DD6065C7209DFCB000F7188D /* SwipingController.swift */,
+				DD6065C9209E034A00F7188D /* PageCell.swift */,
+				DD6065CD209EF5BF00F7188D /* Page.swift */,
 			);
 			path = Nupsa;
 			sourceTree = "<group>";
@@ -477,6 +486,7 @@
 			files = (
 				DD31D1F61FB4CB7700D8A5A2 /* HomeModel.swift in Sources */,
 				DD497E1220243CA7002896C9 /* APIClient.swift in Sources */,
+				DD6065CE209EF5BF00F7188D /* Page.swift in Sources */,
 				DDE3BE212036C86300001C2F /* SendingTestsAPI.swift in Sources */,
 				DDAC9869201F915C00369578 /* AddNupsaController.swift in Sources */,
 				DDAC9862201F7A7900369578 /* Nupsa.xcdatamodeld in Sources */,
@@ -501,6 +511,8 @@
 				DDCF782D2021BF190019573D /* Main+CoreDataProperties.swift in Sources */,
 				DDCF7829201FB7BD0019573D /* DetailViewController.swift in Sources */,
 				DD31D1F41FB4C2A900D8A5A2 /* SecondVIewController.swift in Sources */,
+				DD6065CA209E034A00F7188D /* PageCell.swift in Sources */,
+				DD6065C8209DFCB000F7188D /* SwipingController.swift in Sources */,
 				DD0E83D3207D043400DC8443 /* MethodController.swift in Sources */,
 				DD497E15202446DF002896C9 /* JSONNupsa.swift in Sources */,
 			);

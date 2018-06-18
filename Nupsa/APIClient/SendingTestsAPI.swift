@@ -14,7 +14,7 @@ class SendingTestsJSON: NSObject {
     
     var MyEntity = [String]()
     //URL to our web service
-    let URL_SAVE_TEAM = "http://47.91.91.22/api/TestsInsert.php"
+    let URL_SAVE_TEAM = "http://api.nupsa.me/TestsInsert.php"
     
     
     class func sendRecordToServer() {
@@ -46,7 +46,7 @@ class SendingTestsJSON: NSObject {
                 formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
                 let yourDate: String? = formatter.string(from: dateString as Date)
                 formatter.dateFormat = "dd-MMM-yyyy"
-                print(yourDate)
+                print(yourDate ?? "No date")
                 
                 
                 recordsSwift[i]["datestamp"] = yourDate
@@ -58,7 +58,7 @@ class SendingTestsJSON: NSObject {
             {
                 
                 
-                let URL_SAVE_DATA = URL(string: "http://47.91.91.22/api/TestsInsert.php")
+                let URL_SAVE_DATA = URL(string: "http://api.nupsa.me/TestsInsert.php")
                 let request = NSMutableURLRequest(url: URL_SAVE_DATA!)
                 
                 print(jsonData)

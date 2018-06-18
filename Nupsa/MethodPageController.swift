@@ -10,14 +10,16 @@ import Foundation
 import UIKit
 
 class MethodPageController: UIViewController {
-    
+      let attrString = NSMutableAttributedString(string: "Hide")
     
     @IBAction func AboutButton(_ sender: Any) {
         
     let button = sender as! UIButton
-        
-        if button.titleLabel?.text == "Что такое Nupsa.me?" {
-            button.setTitle("Hide", for: .normal )
+      
+        if button.titleLabel?.text == "What is Nupsa.me?" {
+            
+            
+            button.setAttributedTitle(attrString, for: .normal)
             
             UIView.animate(withDuration: 0.3, animations: {
                 
@@ -25,7 +27,7 @@ class MethodPageController: UIViewController {
             })
         } else {
             
-            button.setTitle("Что такое Nupsa.me?", for: .normal )
+            button.setAttributedTitle(NSMutableAttributedString(string: "What is Nupsa.me?"), for: .normal)
             
             UIView.animate(withDuration: 0.3, animations: {
                 
@@ -42,8 +44,8 @@ class MethodPageController: UIViewController {
         
         let button = sender as! UIButton
         
-        if button.titleLabel?.text == "Как работает методика?" {
-            button.setTitle("Hide", for: .normal )
+        if button.titleLabel?.text == "How does the technique work?" {
+            button.setAttributedTitle(attrString, for: .normal)
             
              self.Method.isHidden = false
    /*
@@ -53,7 +55,7 @@ class MethodPageController: UIViewController {
             }) */
         } else {
             
-            button.setTitle("Как работает методика?", for: .normal )
+            button.setAttributedTitle(NSMutableAttributedString(string: "How does the technique work?"), for: .normal)
             
             UIView.animate(withDuration: 0.3, animations: {
                 
@@ -69,8 +71,8 @@ class MethodPageController: UIViewController {
         
         let button = sender as! UIButton
         
-        if button.titleLabel?.text == "Что нужно делать?" {
-            button.setTitle("Hide", for: .normal )
+        if button.titleLabel?.text == "What do you have to do?" {
+            button.setAttributedTitle(attrString, for: .normal)
             
             self.ToDo.isHidden = false
             /*
@@ -80,7 +82,7 @@ class MethodPageController: UIViewController {
              }) */
         } else {
             
-            button.setTitle("Что нужно делать?", for: .normal )
+            button.setAttributedTitle(NSMutableAttributedString(string: "What do you have to do?"), for: .normal)
             
             UIView.animate(withDuration: 0.3, animations: {
                 
@@ -93,8 +95,8 @@ class MethodPageController: UIViewController {
     @IBAction func ImportantThingsButton(_ sender: Any) {
         let button = sender as! UIButton
         
-        if button.titleLabel?.text == "2 Важные вещи" {
-            button.setTitle("Hide", for: .normal )
+        if button.titleLabel?.text == "2 important things:" {
+            button.setAttributedTitle(attrString, for: .normal)
             
             self.ImportantThings.isHidden = false
             /*
@@ -104,7 +106,7 @@ class MethodPageController: UIViewController {
              }) */
         } else {
             
-            button.setTitle("2 Важные вещи", for: .normal )
+            button.setAttributedTitle(NSMutableAttributedString(string: "2 important things:"), for: .normal)
             
             UIView.animate(withDuration: 0.3, animations: {
                 
@@ -119,8 +121,8 @@ class MethodPageController: UIViewController {
     @IBAction func BasePrinciplesButton(_ sender: Any) {
         let button = sender as! UIButton
         
-        if button.titleLabel?.text == "Базовые принципы:" {
-            button.setTitle("Hide", for: .normal )
+        if button.titleLabel?.text == "Basic principles:" {
+            button.setAttributedTitle(attrString, for: .normal)
             
             self.BasePrinciples.isHidden = false
             /*
@@ -130,7 +132,7 @@ class MethodPageController: UIViewController {
              }) */
         } else {
             
-            button.setTitle("Базовые принципы:", for: .normal )
+            button.setAttributedTitle(NSMutableAttributedString(string: "Basic principles:"), for: .normal)
             
             UIView.animate(withDuration: 0.3, animations: {
                 

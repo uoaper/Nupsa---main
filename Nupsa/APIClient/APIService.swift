@@ -16,7 +16,7 @@ class APIService: NSObject {
     
 
     
-    lazy var endPoint: String = { return "http://47.91.91.22/api/service.php" }  ()
+    lazy var endPoint: String = { return "http://api.nupsa.me/service.php" }  ()
         
         
         enum Result <T>

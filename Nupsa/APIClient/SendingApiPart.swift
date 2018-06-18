@@ -14,7 +14,7 @@ class SendingJSON: NSObject {
   
   var MyEntity = [String]()
     //URL to our web service
-    let URL_SAVE_TEAM = "http://47.91.91.22/api/createteam1.php"
+    let URL_SAVE_TEAM = "http://api.nupsa.me/NupsaInsert.php"
    
     
     class func sendRecordToServer() {
@@ -58,7 +58,7 @@ class SendingJSON: NSObject {
             {
                 
                 
-                let URL_SAVE_DATA = URL(string: "http://47.91.91.22/api/createteam1.php")
+                let URL_SAVE_DATA = URL(string: "http://api.nupsa.me/createteam1.php")
                 let request = NSMutableURLRequest(url: URL_SAVE_DATA!)
                 
                 print(jsonData)

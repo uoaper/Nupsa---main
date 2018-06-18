@@ -18,8 +18,7 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
     
     
-
-    var window: UIWindow?
+ var window: UIWindow?
 
     // Fetcher from Sync library
     
@@ -32,7 +31,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         // Initialize sign-in
         GIDSignIn.sharedInstance().clientID = "937147178730-17cto6r7c6qdeo78jfc2i7d97rsvusvl.apps.googleusercontent.com"
         GIDSignIn.sharedInstance().delegate = self
-          IQKeyboardManager.sharedManager().enable = true
+          IQKeyboardManager.shared.enable = true
         // Starting sync APIClient
     
       CoreDataStackJSON.sharedInstance.saveContext()
@@ -43,16 +42,63 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
       
         let urls = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
         print(urls[urls.count-1] as URL)
+
+        // It's should be commented on the production as it for WT testing
         
-        return true
+        //    UserDefaults.standard.set(false, forKey: "Walkthrough")
         
+        // WalkThrought
         
+     
+        if !UserDefaults.standard.bool(forKey: "Walkthrough") {
+            UserDefaults.standard.set(true, forKey: "Walkthrough")
+       
+        print("and now we in WT")
+          
+            window = UIWindow()
+            window?.makeKeyAndVisible()
+            
+            let layout =  UICollectionViewFlowLayout()
+            layout.scrollDirection = .horizontal
+            let swipingController = SwipingController(collectionViewLayout: layout)
+            
+            window?.rootViewController = swipingController
       
+     }
+          return true
     }
     // [END didfinishlaunching]
     
-    func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool {
-        return FBSDKApplicationDelegate.sharedInstance().application(application, open: url as URL!, sourceApplication: sourceApplication, annotation: annotation)
+    
+    public func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
+        
+        let facebookSharedInstance = FBSDKApplicationDelegate.sharedInstance().application(
+            app,
+            open: url as URL?,
+            sourceApplication: options[UIApplicationOpenURLOptionsKey.sourceApplication] as! String,
+            annotation: options[UIApplicationOpenURLOptionsKey.annotation]
+        )
+        
+        let googleSharedInstance = GIDSignIn.sharedInstance().handle(url,
+                                                                     sourceApplication: options[UIApplicationOpenURLOptionsKey.sourceApplication] as? String,
+                                                                     annotation: options[UIApplicationOpenURLOptionsKey.annotation])
+        
+        return facebookSharedInstance || googleSharedInstance
+    }
+    
+    public func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
+        
+        let googleSighIn = GIDSignIn.sharedInstance().handle(url,
+                                                       sourceApplication: sourceApplication,
+                                                       annotation: annotation)
+        
+        let facebookSignIn = FBSDKApplicationDelegate.sharedInstance().application(
+            application,
+            open: url as URL?,
+            sourceApplication: sourceApplication,
+            annotation: annotation)
+        
+        return  facebookSignIn || googleSighIn
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
@@ -78,13 +124,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
     }
 
     // [START openurl]
-    func application(_ application: UIApplication,
-                     open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
-        return GIDSignIn.sharedInstance().handle(url,
-                                                 sourceApplication: sourceApplication,
-                                                 annotation: annotation)
-    }
+
     // [END openurl]
+    
+   /*
     
     @available(iOS 9.0, *)
     func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any]) -> Bool {
@@ -93,6 +136,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
                                                  annotation: options[UIApplicationOpenURLOptionsKey.annotation])
     }
 
+ */
     // [START signin_handler]
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!,
               withError error: Error!) {
